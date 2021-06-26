@@ -5,10 +5,9 @@
             :url "https://www.eclipse.org/legal/epl-2.0/"}
   :dependencies [[org.clojure/clojure "1.10.0"]
                  [enlive "1.1.1"]
-                 [ring "1.2.0"]
                  [clj-http "3.12.0"]
                  [cheshire "5.9.0"]
-                 [net.cgrand/moustache "1.1.0"]]
+                 [hiccup "1.0.5"]]
   :main ^:skip-aot reddit-scraper.core
   :target-path "target/%s"
   :profiles {:uberjar {:aot :all}})
