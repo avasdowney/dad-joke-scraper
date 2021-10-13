@@ -1,36 +1,22 @@
-# reddit-scraper
+# dad-joke-scraper
 
-FIXME: description
+A web scraper that pulls the hot jokes from [r/dadjokes](https://www.reddit.com/r/dadjokes/). Work on this project is still ongoing. The final product will display dad jokes on my [website](https://avasdowney.github.io/).
 
-## Installation
+## Installation and Usage
 
-Download from http://example.com/FIXME.
+1.) clone the repo in local dir 
 
-## Usage
+2.) load core.clj into lein repl
 
-FIXME: explanation
-
-    $ java -jar reddit-scraper-0.1.0-standalone.jar [args]
-
-## Options
-
-FIXME: listing of options this app accepts.
-
-## Examples
-
-...
+3.) run command ``` (get-one-joke) ``` to get one dad joke from the hot page or ``` (dad-jokes) ``` to get all of the jokes on the hot page
 
 ### Bugs
 
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
+No known bugs. Please submit any bugs found to issues page in git repo.
 
 ## License
 
-Copyright © 2021 FIXME
+Copyright © 2021
 
 This program and the accompanying materials are made available under the
 terms of the Eclipse Public License 2.0 which is available at
