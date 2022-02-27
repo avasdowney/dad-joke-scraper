@@ -37,10 +37,20 @@
 (defn dad-jokes []
   (map #(select-joke %) (dad-jokes-data)))
 
-;;;; ============================
-;;;; RETRIEVAL OF SINGULAR JOKES
-;;;; ============================
-
 ;; retrieves a random joke from the jokes listed
-(defn get-one-joke []
+(defn get-random-joke []
   (nth (dad-jokes) (rand-int 25)))
+
+;;;; ================================
+;;;; PARSE JOKES INTO SEPERATE PARTS
+;;;; ================================
+
+;; split joke into seperate parts
+(defn split-joke []
+  (def joke (get-random-joke))
+  (def title (select-keys joke [:title]))
+  (def selftext (select-keys joke [:selftext]))
+  (def author (select-keys joke [:author]))
+  (println title)
+  (println selftext)
+  (println author))
