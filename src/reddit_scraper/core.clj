@@ -39,18 +39,27 @@
 
 ;; retrieves a random joke from the jokes listed
 (defn get-random-joke []
-  (nth (dad-jokes) (rand-int 25)))
+  (def joke (nth (dad-jokes) (rand-int 25))))
 
 ;;;; ================================
-;;;; PARSE JOKES INTO SEPERATE PARTS
+;;;; PARSE JOKES INTO SEPARATE PARTS
 ;;;; ================================
 
-;; split joke into seperate parts
+;; retrieves setup of joke
+(defn get-setup []
+  (def setup (get joke :title)))
+
+;; retrieves punchline of joke
+(defn get-punchline []
+  (def punchline (get joke :selftext)))
+
+;; retrieves author of joke
+(defn get-author []
+  (def author (get joke :author)))
+
+
+;; split joke into separate parts and save to .txt file
 (defn split-joke []
-  (def joke (get-random-joke))
-  (def title (select-keys joke [:title]))
-  (def selftext (select-keys joke [:selftext]))
-  (def author (select-keys joke [:author]))
-  (println title)
-  (println selftext)
-  (println author))
+  (get-random-joke) (get-setup) (get-punchline) (get-author)
+  (def joke-f (str setup "\u200B" punchline "\u200B" author)) ;;split on zero-width
+  (spit "joke.txt" joke-f))
