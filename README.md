@@ -1,6 +1,6 @@
 # dad-joke-scraper
 
-A web scraper that pulls the hot jokes from [r/dadjokes](https://www.reddit.com/r/dadjokes/). Work on this project is still ongoing. The final product will display dad jokes on my [website](https://avasdowney.github.io/).
+A web scraper that pulls the hot jokes from [r/dadjokes](https://www.reddit.com/r/dadjokes/). Work on this project is still ongoing. The final product will display dad jokes on my [website](https://avadowney.com).
 
 ## Installation and Usage
 
