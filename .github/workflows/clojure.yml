@@ -1,8 +1,8 @@
-name: Clojure CI
+name: Refresh Joke
 
 on:
   schedule:
-    - cron: "*/60 * * * *"
+    - cron: "*/90 * * * *"
   workflow_dispatch:
 
 jobs:
@@ -14,3 +14,12 @@ jobs:
     - uses: actions/checkout@v2
     - name: Refresh Joke
       run: lein run -m reddit-scraper.core
+    - name: Trigger GitHub pages rebuild
+      run: |
+        curl --fail --request POST \
+          --url https://api.github.com/repos/${{ github.repository }}/pages/builds \
+          --header "Authorization: Bearer $USER_TOKEN"
+      env:
+        # You must create a personal token with repo access as GitHub does
+        # not yet support server-to-server page builds.
+        USER_TOKEN: ${{ secrets.USER_TOKEN }}
