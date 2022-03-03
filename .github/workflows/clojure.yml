@@ -1,0 +1,21 @@
+name: Clojure CI
+
+on:
+  schedule:
+    - cron: "*/60 * * * *"
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use oxr463/setup-leiningen
+      uses: oxr463/setup-leiningen@0.0.1
+      with:
+        exec: |
+          lein uberjar && \
+          cp "$(find . -name '*.jar')" .
+    - name: Refresh Joke
+      run: lein run -m reddit-scraper.core
