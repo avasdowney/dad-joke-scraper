@@ -31,7 +31,7 @@
 
 ;; given the raw data, pull out just what we want
 (defn select-joke [data]
-  (select-keys data [:title :selftext :author]))
+  (select-keys data [:title :selftext :author :url]))
 
 ;; show all of the jokes with just what want
 (defn dad-jokes []
@@ -57,9 +57,12 @@
 (defn get-author []
   (def author (get joke :author)))
 
+;; retrieves link to joke
+(defn get-link []
+  (def link (get joke :url)))
 
 ;; split joke into separate parts and save to .txt file
 (defn split-joke []
-  (get-random-joke) (get-setup) (get-punchline) (get-author)
-  (def joke-f (str setup "\u200B" punchline "\u200B" author)) ;;split on zero-width
+  (get-random-joke) (get-setup) (get-punchline) (get-author) (get-link)
+  (def joke-f (str setup "\n\n" punchline "\n\n-" author)) ;;split on zero-width
   (spit "joke.txt" joke-f))

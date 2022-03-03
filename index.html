@@ -6,10 +6,37 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title> Reddit Dad Joke Scraper </title>
     <!-- What people can look up to find me -->
-    <meta name = "keywords" content = "Ava Downey, r/dadjokes, clojure, web scraper">
+    <meta name = "keywords" content = "Ava Downey, r/dadjokes, clojure, web scraper, reddit scraper">
 </head>
 
-<body style="text-align: center; font-family: Arial; background-color: #CDDEF0">
-    <h1 style="color: #FF5700"> Reddit Dad Joke Scraper </h1>
-    <p> Github pages coming soon! </p>
+<style>
+    body {
+        font-family: Arial;
+        background-color: #CDDEF0;
+        text-align: center;
+    }
+
+    h1 {
+        color: #FF5700;
+    }
+
+    p {
+        font-size: 6pt;
+    }
+
+    a {
+        text-decoration: none;
+        color: #FF5700;
+    }
+</style>
+
+<body>
+    <h1> Reddit Dad Joke Scraper </h1>
+    <p> Pulls jokes from the subreddit <a href="https://www.reddit.com/r/dadjokes/" target=_blank rel="noreferrer">r/dadjokes</a>. A random joke
+        from the hot page will be displayed here! </p>
+    <p> Source code can be found <a href="https://github.com/avasdowney/dad-joke-scraper" rel="noreferrer">here</a>.</p>
+    <embed src="joke.txt">
+    <script src="src/reddit_scraper/core.clg">
+
+    </script>
 </body>
