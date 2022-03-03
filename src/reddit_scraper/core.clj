@@ -66,3 +66,6 @@
   (get-random-joke) (get-setup) (get-punchline) (get-author) (get-link)
   (def joke-f (str setup "\n\n" punchline "\n\n-" author)) ;;split on zero-width
   (spit "joke.txt" joke-f))
+
+(defn -main []
+  (split-joke))
