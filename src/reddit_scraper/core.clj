@@ -41,6 +41,7 @@
 (defn get-random-joke []
   (def joke (nth (dad-jokes) (rand-int 25))))
 
+
 ;;;; ================================
 ;;;; PARSE JOKES INTO SEPARATE PARTS
 ;;;; ================================
@@ -61,10 +62,17 @@
 (defn get-link []
   (def link (get joke :url)))
 
+(defn print-joke []
+  (print setup "\n")
+  (print punchline "\n")
+  (print "  --" author "\n")
+  (print "link:" link))
+
 ;; split joke into separate parts and save to .txt file
 (defn split-joke []
   (get-random-joke) (get-setup) (get-punchline) (get-author) (get-link)
-  (def joke-f (str setup "\n\n" punchline "\n\n-" author)) ;;split on zero-width
+  (print-joke)
+  (def joke-f (str setup "\n\n" punchline "\n\n-" author))  ;;split on zero-width
   (spit "joke.txt" joke-f))
 
 (defn -main []

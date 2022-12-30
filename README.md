@@ -8,7 +8,7 @@ A web scraper that pulls the hot jokes from [r/dadjokes](https://www.reddit.com/
 
 2.) load core.clj into lein repl
 
-3.) run command ``` (get-one-joke) ``` to get one dad joke from the hot page or ``` (dad-jokes) ``` to get all of the jokes on the hot page
+3.) run command ``` (split-joke) ``` to get one dad joke from the hot page or ``` (dad-jokes) ``` to get a raw list of all of the jokes on the hot page
 
 ### Bugs
 
