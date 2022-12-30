@@ -1,8 +1,9 @@
 name: Refresh Joke
 
 on:
-  #schedule:
-   # - cron: "*/90 * * * *"
+  schedule:
+    - cron: "0 5 * * *"
+      displayName: Daily joke update
   workflow_dispatch:
 
 jobs:

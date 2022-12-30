@@ -1,6 +1,7 @@
 # dad-joke-scraper
 
-A web scraper that pulls the hot jokes from [r/dadjokes](https://www.reddit.com/r/dadjokes/). Work on this project is still ongoing. The final product will display dad jokes on my [website](https://avadowney.com).
+A web scraper that pulls the hot jokes from [r/dadjokes](https://www.reddit.com/r/dadjokes/). Every night at midnight a 
+new joke will display [here](https://avasdowney.github.io/dad-joke-scraper/).
 
 ## Installation and Usage
 
@@ -8,7 +9,8 @@ A web scraper that pulls the hot jokes from [r/dadjokes](https://www.reddit.com/
 
 2.) load core.clj into lein repl
 
-3.) run command ``` (split-joke) ``` to get one dad joke from the hot page or ``` (dad-jokes) ``` to get a raw list of all of the jokes on the hot page
+3.) run command ``` (split-joke) ``` to get one dad joke from the hot page or ``` (dad-jokes) ``` to get a raw list of 
+all of the jokes on the hot page
 
 ### Bugs
 
