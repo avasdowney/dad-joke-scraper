@@ -20,6 +20,7 @@ a {
 .border {
     border-style: solid;
     border-width: 10px;
+    background: #121212;
 }
 
 @keyframes wheelHueColor {
