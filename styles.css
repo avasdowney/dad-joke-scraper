@@ -1,8 +1,8 @@
 body {
     font-family: "Lucida Console", "Courier New", monospace;
-    background-color: white;
+    background-color: #101010;
     text-align: center;
-    color: #121212;
+    color: #808080;
 }
 
 h1 {
@@ -17,11 +17,13 @@ a {
 
 /* Joke Display */
 
-.border {
-    color: white;
-    border-style: solid;
-    border-width: 10px;
-    background: #121212;
+.joke {
+    color: !white;
+}
+
+.jokeDiv {
+    margin-left: 25%;
+    margin-right: 25%;
 }
 
 @keyframes wheelHueColor {
@@ -36,7 +38,9 @@ a {
 }
 
 .rotateColor {
-    color: #ffffff;
+    border-style: solid;
+    border-width: 6px;
+    background: #121212;
     animation: wheelHueColor 10s infinite;
 }
 
@@ -46,7 +50,7 @@ ul {
     margin: 0;
     padding: .5vw;
     overflow: hidden;
-    background-color:#121212;
+    background-color:#101010;
     top: 0;
     width: 99%;
   }

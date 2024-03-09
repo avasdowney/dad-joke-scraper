@@ -17,6 +17,12 @@
     </ul>
     <h1> Reddit Dad Joke Scraper </h1>
     <p> Pulls jokes from the subreddit <a href="https://www.reddit.com/r/dadjokes/" target=_blank rel="noreferrer">r/dadjokes</a>. The joke refreshes here every night at 12:00am EST! </p>
-    <embed src="joke.txt" class="border rotateColor"></div>
-    <script src="src/reddit_scraper/core.clg"> </script>
+    <script>
+        fetch('joke.txt')
+          .then(response => response.text())
+          .then(text => document.getElementById("joke").innerHTML = text)
+    </script>
+    <div class="rotateColor jokeDiv">
+        <p id="joke"></p>
+    </div>
 </body>
